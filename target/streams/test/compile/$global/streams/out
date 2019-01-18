@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\DDCT\src\test\scala\CafeMenuSpec.scala:74:39: value ahouldBe is not a member of Double[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.totalCost(total) ahouldBe (8.00)[0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

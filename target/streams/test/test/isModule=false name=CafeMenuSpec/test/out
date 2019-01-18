@@ -1,0 +1,4 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCafeMenuSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should be called *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  "cola[]" was not equal to "cola[l]" (CafeMenuSpec.scala:8)[0m[0m

@@ -1,4 +1,35 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mCafeMenuSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m cola[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- should be called *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  "cola[]" was not equal to "cola[l]" (CafeMenuSpec.scala:8)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mGet Item name of MenuItems[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Coffee[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Cheese Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Steak Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m Price of Item[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Cola price should be 50p [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Coffee price should be £1 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Cheese Sandwich price should be £2 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Steak Sandwich price should be £4.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mItem is hot[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Coffee [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Cheese Sandwich  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Steak Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mItem is a drink[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Coffee [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Cheese Sandwich  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Steak Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mThe total of items[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe total of cola + coffee + cheese sandwich [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £3.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe total of cola + coffee  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £1.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe total of cheese sandwich + steak sandwich [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £6.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif items are drinks there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should be no service charge when drinks are included in the list *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  1.65 was not equal to 3.85 (CafeMenuSpec.scala:101)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should be a 10 % service charge when food  are included in the list *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  6.5 was not equal to 3.85 (CafeMenuSpec.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- be a 10 % service charge when food  are included in the list[0m[0m

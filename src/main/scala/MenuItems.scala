@@ -1,6 +1,6 @@
 case class MenuItems (
                      item:String,
                      price:Double,
-                     isDrink:Boolean,
+                     isFood:Boolean,
                      isHot:Boolean
                      )

@@ -1,29 +1,29 @@
 import org.scalatest.{Matchers, WordSpec}
 
 class CafeMenuSpec extends WordSpec with Matchers {
-//reading the first item name
+  //reading the first item name
   "Get Item name of MenuItems" should {
 
-     "be called Cola" in {
-       MenuItemsCalcs.getItemName(MenuItemsCalcs.cola) shouldBe ("Cola")
-      MenuItemsCalcs.cola.item shouldBe("Cola")
-     }
+    "be called Cola" in {
+      MenuItemsCalcs.getItemName(MenuItemsCalcs.cola) shouldBe ("Cola")
+      MenuItemsCalcs.cola.item shouldBe ("Cola")
+    }
     "be called Coffee" in {
       MenuItemsCalcs.getItemName(MenuItemsCalcs.coffee) shouldBe ("Coffee")
-     // coffee.item shouldBe("Coffee")
+      // coffee.item shouldBe("Coffee")
     }
     "be called Cheese Sandwich" in {
-      MenuItemsCalcs.getItemName(MenuItemsCalcs.cheeseSandwich)shouldBe ("Cheese Sandwich")
+      MenuItemsCalcs.getItemName(MenuItemsCalcs.cheeseSandwich) shouldBe ("Cheese Sandwich")
       //MenuItemsCalcs.cheeseSandwich.item shouldBe("Cheese Sandwich")
     }
     "be called Steak Sandwich" in {
       MenuItemsCalcs.getItemName(MenuItemsCalcs.steakSandwich) shouldBe ("Steak Sandwich")
-      MenuItemsCalcs.steakSandwich.item shouldBe("Steak Sandwich")
+      MenuItemsCalcs.steakSandwich.item shouldBe ("Steak Sandwich")
     }
-   }
+  }
 
-// retrieving the correct price for item
-  " Price of Item" should{
+  // retrieving the correct price for item
+  " Price of Item" should {
     "Cola price should be 50p " in {
       MenuItemsCalcs.priceOfItem(MenuItemsCalcs.cola) shouldBe (0.50)
     }
@@ -38,7 +38,7 @@ class CafeMenuSpec extends WordSpec with Matchers {
     }
   }
   //
-   "Item is hot" should{
+  "Item is hot" should {
     "be false for Cola" in {
       MenuItemsCalcs.isItemHot(MenuItemsCalcs.cola) shouldBe (false)
     }
@@ -53,7 +53,7 @@ class CafeMenuSpec extends WordSpec with Matchers {
     }
   }
 
-  "Item is food" should{
+  "Item is food" should {
     "be false for Cola" in {
       MenuItemsCalcs.isItemFood(MenuItemsCalcs.cola) shouldBe (false)
     }
@@ -70,61 +70,94 @@ class CafeMenuSpec extends WordSpec with Matchers {
   //testing the total cost for any item that is inputted
   "The total of items" should {
     "cost £8" in {
-     // val total =List(MenuItemsCalcs.cola,MenuItemsCalcs.coffee,MenuItemsCalcs.cheeseSandwich,MenuItemsCalcs.steakSandwich)
-
       MenuItemsCalcs.totalCost(MenuItemsCalcs.total) shouldBe (8.00)
     }
 
   }
   "the total of cola + coffee + cheese sandwich " should {
     "cost £3.50" in {
-      //val items= List(MenuItemsCalcs.cola,MenuItemsCalcs.coffee,MenuItemsCalcs.cheeseSandwich)
-      MenuItemsCalcs.totalCost(MenuItemsCalcs.items) shouldBe(3.50)
+      MenuItemsCalcs.totalCost(MenuItemsCalcs.items) shouldBe (3.50)
     }
   }
   "the total of cola + coffee  " should {
     "cost £1.50" in {
-      //val items= List(MenuItemsCalcs.cola,MenuItemsCalcs.coffee,MenuItemsCalcs.cheeseSandwich)
-      MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyDrinks) shouldBe(1.50)
+      MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyDrinks) shouldBe (1.50)
     }
   }
   "the total of cheese sandwich + steak sandwich " should {
     "cost £6.50" in {
-      //val items= List(MenuItemsCalcs.cola,MenuItemsCalcs.coffee,MenuItemsCalcs.cheeseSandwich)
-      MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyfood) shouldBe(6.50)
+      MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyFood) shouldBe (6.50)
     }
   }
+
+
   //part 2 of exercise
+//adding a service charge to the items in the menu based on their properties
 
-  "if items are drinks there" should{
+  //service charge function tests
+  "if the service charge is more than 20 pounds, there" should {
+    "be a cap set, return the max of £20" in {
+      MenuItemsCalcs.CheckServiceCharge(21.00) shouldBe (20.00)
+    }
+  }
+
+  "if the service charge is equal to £20 there" should {
+    "be a cap set of £20 for the service charge" in {
+      MenuItemsCalcs.CheckServiceCharge(20.00) shouldBe(20.00)
+    }
+  }
+  "if the service charge is less than £20 there" should {
+    "be a returned value of the service charge" in{
+      MenuItemsCalcs.CheckServiceCharge(19.00) shouldBe(19.00)
+    }
+  }
+//calculating the service charge for specified items
+  "if items only contain drinks there" should {
     "be no service charge when drinks are included in the list" in {
-      MenuItemsCalcs.CalculateServiceCharge(1.50, MenuItemsCalcs.onlyDrinks) shouldBe (1.50)
-    }
-    "be a 10 % service charge when food  are included in the list" in {
-      MenuItemsCalcs.CalculateServiceCharge(6.50, MenuItemsCalcs.onlyfood) shouldBe (7.15)
+      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyDrinks), MenuItemsCalcs.onlyDrinks) shouldBe (1.50)
     }
   }
-  "be a 10 % service charge when food  are included in the list" in {
-    MenuItemsCalcs.CalculateServiceCharge(3.50, MenuItemsCalcs.items) shouldBe (3.85)
+    "if items contain only hot food there"  should {
+      "be a 20 % service charge added to the total cost where the service charge is under the cap limit of £20" in {
+        MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyHotFood), MenuItemsCalcs.onlyHotFood) shouldBe (5.40)
+      }
+    }
+"if items contain only cold food there " should {
+  "be a 10% service charge added to the total cost where the service charge is under the cap limit of £20" in{
+    MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyColdFood), MenuItemsCalcs.onlyColdFood) shouldBe (2.20)
+  }
+}
+  "if items contain a combination of drinks and cold food there " should {
+    "be a 10% service charge added to the total cost where the service charge is under the cap limit of £20" in {
+      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyColdFoodDrink), MenuItemsCalcs.onlyColdFoodDrink) shouldBe (3.85)
+    }
+  }
 
+  " if items contain a combination of drinks and hot food there" should {
+    "be a 20% service charge added to the total cost where the service charge is under the cap limit of £20" in {
+      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyHotFoodDrink), MenuItemsCalcs.onlyHotFoodDrink) shouldBe(7.20)
+    }
   }
+
+
+
+
+
+
+
 
 
 }
 
-//cola should be cold done
-//cola should be 50p done
-//coffee should be hot done
-//coffee should be £1 done
-//cheese sandwich should be cold done
-//cheese sandwhich should be £2 done
-//steak sandwhich should be hot done
-//steak sandwhich should be £4.50 done
-
-//total bill of inputted menu iteems should give a total value done
-//cola + coffee + cheese sandwhich should give 3.5 done
-
 // ***part 2
-//if items are drinks there  should be no service charge
+//if imtems are drinks there  should be no service charge done
 //if items contains any food, add a service charge of 10% to total bill done
 //if there is any hot food in list, there should be a service charge of 20% to total bill and a max service charge of £20
+
+/*
+tests to write:
+
+
+6.when it is higher than than £20 test
+
+ */

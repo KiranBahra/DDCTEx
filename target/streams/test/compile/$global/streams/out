@@ -1,4 +1,46 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\DDCT\src\test\scala\CafeMenuSpec.scala:74:39: value ahouldBe is not a member of Double[0m
-[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.totalCost(total) ahouldBe (8.00)[0m
-[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:84:47: value total is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.totalCost(MenuItemsCalcs.total) shouldBe (8.00)[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:90:47: value items is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.totalCost(MenuItemsCalcs.items) shouldBe (3.50)[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:95:47: value onlyDrinks is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyDrinks) shouldBe (1.50)[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:100:47: value onlyFood is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyFood) shouldBe (6.50)[0m
+[0m[[0m[31merror[0m] [0m[0m                                              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:128:85: value onlyDrinks is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyDrinks), MenuItemsCalcs.onlyDrinks) shouldBe (1.50)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:128:113: value onlyDrinks is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyDrinks), MenuItemsCalcs.onlyDrinks) shouldBe (1.50)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:133:87: value onlyHotFood is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m        MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyHotFood), MenuItemsCalcs.onlyHotFood) shouldBe (5.40)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:133:116: value onlyHotFood is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m        MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyHotFood), MenuItemsCalcs.onlyHotFood) shouldBe (5.40)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:138:83: value onlyColdFood is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m    MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyColdFood), MenuItemsCalcs.onlyColdFood) shouldBe (2.20)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:138:113: value onlyColdFood is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m    MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyColdFood), MenuItemsCalcs.onlyColdFood) shouldBe (2.20)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:143:85: value onlyColdFoodDrink is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyColdFoodDrink), MenuItemsCalcs.onlyColdFoodDrink) shouldBe (3.85)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:143:120: value onlyColdFoodDrink is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyColdFoodDrink), MenuItemsCalcs.onlyColdFoodDrink) shouldBe (3.85)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                       ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:149:85: value onlyHotFoodDrink is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyHotFoodDrink), MenuItemsCalcs.onlyHotFoodDrink) shouldBe(7.20)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:149:119: value onlyHotFoodDrink is not a member of object MenuItemsCalcs[0m
+[0m[[0m[31merror[0m] [0m[0m      MenuItemsCalcs.CalculateServiceCharge(MenuItemsCalcs.totalCost(MenuItemsCalcs.onlyHotFoodDrink), MenuItemsCalcs.onlyHotFoodDrink) shouldBe(7.20)[0m
+[0m[[0m[31merror[0m] [0m[0m                                                                                                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\test\scala\MenuItemsCalcsSpec.scala:156:18: not found: value MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m      val cola = MenuItems("Cola", 1.0, false, false)[0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m15 errors found[0m

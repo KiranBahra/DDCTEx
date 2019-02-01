@@ -1,4 +1,4 @@
-import scala.util.control.Breaks
+
 
 case class MenuItems (
                        item:String,
@@ -18,84 +18,14 @@ val onlyColdFoodDrink= List(cola,coffee,cheeseSandwich)
 val onlyHotFood = List(steakSandwich)
 val  onlyHotFoodDrink = List(cola, coffee,steakSandwich)
 
-var cost : Double =0.00
-/*
-for (a  <- total){
-  cost= cost + a.price
-}
-println("the total cost is "+ cost)
-*/
-//go through list to check if any food is available
-//go through list to check if any drinks are available
-//if food is false - means there is only drinks
-//if drinks is false - means there is only food
-//if both are true then it contains both where charge is also applied
-def CalculateServiceCharge (initialCost : Double, x:List[MenuItems]): Double = {
-  var finalCost = 0.00
-  var foodPresent = false
-  var HotFoodPresent = false
-  var drinksPresent = false
 
-  //checking for if food is present
-  val loop = new Breaks
-  loop.breakable {
-    for (a <- x) {
-      if (a.isFood == true) {
-        foodPresent = true
-        loop.break()
-      }
-    }}
+val ItemPrice = total.map(p=>p.price)
+val totalCost = ItemPrice.sum
+//check if food is present
+//val foodPresent= total.filter(t=> (t.isFood ==true && t.isHot ==true))
+//val fowodPresent= onlyColdFoodDrink.exists(t=> (t.isFood ==true && t.isHot ==true))
 
-  loop.breakable {
-    for (a <- x) {
-      if (a.isHot == true && a.isFood == true) {
-        HotFoodPresent = true
-        //println("hot food is present ")
-        loop.break()
+val foodPresent = onlyColdFoodDrink.exists(t => t.isFood ==true)
+val HotFoodPresent = onlyColdFoodDrink.exists(t=> t.isHot==true)
+val drinksPresent = onlyColdFoodDrink.exists((t=> t.isFood==false))
 
-      }
-    }
-  }
-  //checking if drinks are present
-  loop.breakable {
-    for (a <- x) {
-      if (a.isFood == false) {
-        drinksPresent = true
-        loop.break()
-      }
-    }
-  }
-
-  if (foodPresent ==true  && drinksPresent==true && HotFoodPresent==false){
-    finalCost= (initialCost *0.1) + initialCost
-     println("The final cost is " + finalCost + " both food and drink")
-    return finalCost
-  }else if (foodPresent ==true  && drinksPresent==true && HotFoodPresent==true) {
-    finalCost= (initialCost *0.2) + initialCost
-     println("The final cost is " + finalCost + " both hot food and drink")
-    return finalCost
-
-  }
-  else if(foodPresent==true && drinksPresent==false && HotFoodPresent==false){
-    finalCost= (initialCost *0.1) + initialCost
-     println("The final cost is " + finalCost + " only cold food")
-    return finalCost
-  }else if (foodPresent==true && drinksPresent==false && HotFoodPresent==true){
-    finalCost= (initialCost *0.2) + initialCost
-    println("The final cost is " + finalCost + " only hot food")
-    return finalCost
-  }
-  else if (foodPresent==false && drinksPresent==true){
-    finalCost= initialCost
-     println("The final cost is " + finalCost + " only drinks")
-    return finalCost
-  }else{
-      print("initial cost is " + initialCost)
-    return initialCost
-  }
-}
-
-CalculateServiceCharge(6.50, onlyHotFood)
-
-//if  ALL are drinks - no service charge
-//if  food present in any then 10% charge

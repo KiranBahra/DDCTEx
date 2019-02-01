@@ -1,4 +1,28 @@
-[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:68:5: Missing closing brace `}' assumed here[0m
-[0m[[0m[31merror[0m] [0m[0m    loop.breakable {[0m
-[0m[[0m[31merror[0m] [0m[0m    ^[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:8:22: value item is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m    return menuItems.item[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:11:20: value price is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m  return menuItems.price[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:14:20: value isHot is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m  return menuItems.isHot[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:17:20: value isFood is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m  return menuItems.isFood[0m
+[0m[[0m[31merror[0m] [0m[0m                   ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:24:21: value price is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m    cost = cost + a.price[0m
+[0m[[0m[31merror[0m] [0m[0m                    ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:49:15: value isFood is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m        if (a.isFood == true) {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:58:15: value isHot is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m        if (a.isHot && a.isFood) {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:58:26: value isFood is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m        if (a.isHot && a.isFood) {[0m
+[0m[[0m[31merror[0m] [0m[0m                         ^[0m
+[0m[[0m[31merror[0m] [0m[0mC:\Users\kbahra\Documents\repo\DDCTEx\src\main\scala\MenuItemsCalcs.scala:68:15: value isFood is not a member of MenuItems[0m
+[0m[[0m[31merror[0m] [0m[0m        if (a.isFood == false) {[0m
+[0m[[0m[31merror[0m] [0m[0m              ^[0m
+[0m[[0m[31merror[0m] [0m[0m9 errors found[0m

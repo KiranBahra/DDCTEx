@@ -4,7 +4,7 @@
 		module="ddct$sources"
 		revision="0.1"
 		status="integration"
-		publication="20190124112014"
+		publication="20190129101558"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

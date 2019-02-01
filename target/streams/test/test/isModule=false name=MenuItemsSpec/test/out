@@ -1,0 +1,21 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mMenuItemsSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mGet Item name of MenuItems[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Coffee[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Cheese Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be called Steak Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m Price of Item[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Cola price should be 50p [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Coffee price should be £1 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Cheese Sandwich price should be £2 [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Steak Sandwich price should be £4.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mItem is hot[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Coffee [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Cheese Sandwich  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Steak Sandwich[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mItem is food[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Cola[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be false for Coffee [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Cheese Sandwich  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be true for Steak Sandwich[0m[0m

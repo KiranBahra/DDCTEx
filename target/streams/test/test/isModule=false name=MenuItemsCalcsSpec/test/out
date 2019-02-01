@@ -1,0 +1,28 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mMenuItemsCalcsSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mThe total of items[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £8[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe total of cola + coffee + cheese sandwich [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £3.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe total of cola + coffee  [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £1.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mthe total of cheese sandwich + steak sandwich [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £6.50[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif the service charge is more than 20 pounds, there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be a cap set, return the max of £20[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif the service charge is equal to £20 there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be a cap set of £20 for the service charge[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif the service charge is less than £20 there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be a returned value of the service charge[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif items only contain drinks there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be no service charge when drinks are included in the list[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif items contain only hot food there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be a 20 % service charge added to the total cost where the service charge is under the cap limit of £20[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif items contain only cold food there [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be a 10% service charge added to the total cost where the service charge is under the cap limit of £20[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mif items contain a combination of drinks and cold food there [0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should be a 10% service charge added to the total cost where the service charge is under the cap limit of £20 *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  4.2 was not equal to 3.85 (MenuItemsCalcsSpec.scala:78)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m if items contain a combination of drinks and hot food there[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should be a 20% service charge added to the total cost where the service charge is under the cap limit of £20[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m5 Colas[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should cost £2.50[0m[0m
